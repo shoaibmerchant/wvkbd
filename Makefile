@@ -27,11 +27,11 @@ all: ${BIN}
 config.h: config.def.h
 	cp config.def.h config.h
 
-proto/%-client-protocol.c: proto/%.xml
-	wayland-scanner code < $? > $@
+# proto/%-client-protocol.c: proto/%.xml
+# 	wayland-scanner code < $? > $@
 
-proto/%-client-protocol.h: proto/%.xml
-	wayland-scanner client-header < $? > $@
+# proto/%-client-protocol.h: proto/%.xml
+#	wayland-scanner client-header < $? > $@
 
 $(OBJECTS): $(HDRS) $(WVKBD_HEADERS)
 
